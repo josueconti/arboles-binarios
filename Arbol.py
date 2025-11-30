@@ -43,13 +43,21 @@ def inorden(raiz):
 
 def preorden(raiz):
     "implementar recorrido preorden (raíz, izquierda, derecha)."
+    if raiz is None:
+        return
+    print(raiz.valor, end=" ")
+    preorden(raiz.izq)
+    preorden(raiz.der)
 
 
 
 def postorden(raiz):
     "implementar recorrido postorden (izquierda, derecha, raíz)."
-
-
+    if raiz is None:
+        return
+    postorden(raiz.izq)
+    postorden(raiz.der)
+    print(raiz.valor, end=" ")
 
 if __name__ == "__main__":
     # Árbol de ejemplo ya construido
